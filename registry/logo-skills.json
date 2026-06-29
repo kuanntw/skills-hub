@@ -1,0 +1,25 @@
+{
+  "id": "logo-skills",
+  "name": "Logo Skills",
+  "type": "skill-package",
+  "description": "Logo design and brand identity delivery workflow for creating, reviewing, and packaging logo work.",
+  "category": ["design", "branding", "logo", "identity"],
+  "source": {
+    "type": "git",
+    "url": "https://github.com/kuanntw/logo-skills",
+    "entry": "SKILL.md"
+  },
+  "triggers": ["logo", "brand identity", "visual identity", "branding", "商標", "品牌識別", "logo 設計", "品牌設計"],
+  "use_when": [
+    "The task involves creating, reviewing, refining, or packaging logo designs.",
+    "The task involves brand identity deliverables, visual identity systems, or logo handoff standards."
+  ],
+  "avoid_when": ["The task only needs general copy editing or unrelated code changes."],
+  "related_file_patterns": ["**/*logo*", "**/*brand*", "**/*.svg", "**/*.ai", "**/*.png", "**/*.pdf"],
+  "task_types": ["design", "brand_review", "visual_identity", "asset_delivery"],
+  "routing_hint": "Use this skill for logo or brand identity work before producing design directions, review checklists, or delivery packages.",
+  "installation": {
+    "method": "git",
+    "command": "git clone https://github.com/kuanntw/logo-skills"
+  }
+}

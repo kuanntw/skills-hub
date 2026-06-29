@@ -1,0 +1,43 @@
+{
+  "id": "laravel-vibe",
+  "name": "Laravel Vibe Skills Kit",
+  "type": "skill-kit",
+  "description": "A Laravel development skills kit covering project framing, architecture, APIs, Livewire, multilingual strategy, testing, release, and AI collaboration.",
+  "category": ["laravel", "php", "backend", "livewire", "testing", "i18n"],
+  "source": {
+    "type": "git",
+    "url": "https://github.com/kuanntw/laravel-skills",
+    "entry": "skills/laravel-vibe/SKILLS_INDEX.md"
+  },
+  "triggers": ["Laravel", "PHP", "Eloquent", "Livewire", "Blade", "migration", "artisan", "API Resource", "Form Request", "多語系", "租戶翻譯"],
+  "use_when": [
+    "The task involves implementing, reviewing, or planning a Laravel application feature.",
+    "The task involves Laravel APIs, Livewire components, forms, tables, multilingual strategy, tests, releases, or observability."
+  ],
+  "avoid_when": ["The task is unrelated to Laravel or PHP application development."],
+  "related_file_patterns": ["composer.json", "artisan", "app/**/*.php", "routes/*.php", "database/migrations/*.php", "resources/views/**/*.blade.php", "tests/**/*.php", "lang/**/*.php"],
+  "task_types": ["code_generation", "architecture", "api_design", "livewire", "testing", "release", "i18n"],
+  "subskills": [
+    "project-framing",
+    "static-assets-and-external-resources",
+    "feature-architecture",
+    "api-design",
+    "livewire-component-architecture",
+    "livewire-forms-and-tables",
+    "livewire-testing",
+    "livewire-performance-and-pitfalls",
+    "multilingual-strategy",
+    "tenant-translation-override",
+    "data-and-eloquent",
+    "testing-and-quality",
+    "spec-consistency-and-coverage",
+    "release-and-observability",
+    "operation-manual",
+    "ai-collaboration-playbook"
+  ],
+  "routing_hint": "Use this kit for Laravel work, then choose the most specific subskill from SKILLS_INDEX.md.",
+  "installation": {
+    "method": "git",
+    "command": "git clone https://github.com/kuanntw/laravel-skills"
+  }
+}

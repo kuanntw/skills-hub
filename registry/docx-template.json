@@ -1,0 +1,25 @@
+{
+  "id": "docx-template",
+  "name": "DOCX Template",
+  "type": "skill-package",
+  "description": "Company-style Word document generation from Markdown, plain text, or JSON inputs.",
+  "category": ["documents", "word", "docx", "reporting"],
+  "source": {
+    "type": "git",
+    "url": "https://github.com/kuanntw/word-skills",
+    "entry": "skill/SKILL.md"
+  },
+  "triggers": ["Word", "DOCX", "docx", "document template", "report", "proposal", "文件", "報告", "企劃書", "Word 文件"],
+  "use_when": [
+    "The task involves generating a Word document.",
+    "The task involves converting Markdown, plain text, or JSON into a formatted company-style DOCX file."
+  ],
+  "avoid_when": ["The task only needs a Markdown answer and no document artifact."],
+  "related_file_patterns": ["**/*.docx", "**/*.md", "**/*.json", "templates/**/*"],
+  "task_types": ["document_generation", "formatting", "report_generation"],
+  "routing_hint": "Use this skill when the user asks for Word output, DOCX templates, or formal document generation.",
+  "installation": {
+    "method": "git",
+    "command": "git clone https://github.com/kuanntw/word-skills"
+  }
+}

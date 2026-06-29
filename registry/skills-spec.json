@@ -1,0 +1,25 @@
+{
+  "id": "skills-spec",
+  "name": "Skills Package Specification",
+  "type": "reference",
+  "description": "Reference specification for portable AI skill packages, metadata, layout, registry behavior, and progressive disclosure.",
+  "category": ["specification", "skills", "metadata", "registry"],
+  "source": {
+    "type": "git",
+    "url": "https://github.com/kuanntw/skills-spec",
+    "entry": "README.md"
+  },
+  "triggers": ["skill spec", "skill.json", "SKILL.md", "registry schema", "skills package", "技能規格", "技能索引"],
+  "use_when": [
+    "The task involves designing, validating, or discussing the structure of AI skills.",
+    "The task involves skill metadata, package layout, registry behavior, or compatibility with skill-reading agents."
+  ],
+  "avoid_when": ["The task requires using a concrete skill rather than discussing skill package design."],
+  "related_file_patterns": ["**/SKILL.md", "**/skill.json", "skills.index.json", "registry/*.json"],
+  "task_types": ["reference", "schema_design", "skill_authoring", "registry_design"],
+  "routing_hint": "Use this as a reference when changing hub structure, skill metadata, or package conventions.",
+  "installation": {
+    "method": "git",
+    "command": "git clone https://github.com/kuanntw/skills-spec"
+  }
+}

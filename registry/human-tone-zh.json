@@ -1,0 +1,25 @@
+{
+  "id": "human-tone-zh",
+  "name": "Human Tone Chinese",
+  "type": "skill-package",
+  "description": "Traditional Chinese rewriting guidance for making text sound more natural, human, and less AI-like while preserving meaning.",
+  "category": ["writing", "editing", "zh-tw", "copywriting", "tone"],
+  "source": {
+    "type": "git",
+    "url": "https://github.com/kuanntw/human-tone-skills",
+    "entry": "skills/human-tone-zh/SKILL.md"
+  },
+  "triggers": ["去 AI 味", "改自然", "人味", "潤稿", "中文文案", "語氣", "rewrite Chinese", "make it human", "less AI-like"],
+  "use_when": [
+    "The user asks to rewrite Chinese text in a more natural or human tone.",
+    "The task involves zh-TW copywriting, editing, tone refinement, or reducing AI-like phrasing."
+  ],
+  "avoid_when": ["The task requires strict legal, medical, or financial wording where style changes could alter meaning."],
+  "related_file_patterns": ["**/*.md", "**/*.txt", "content/**/*", "copy/**/*"],
+  "task_types": ["writing", "editing", "copywriting", "tone_rewrite"],
+  "routing_hint": "Use this skill before rewriting Traditional Chinese prose, marketing copy, social posts, or user-facing messages.",
+  "installation": {
+    "method": "git",
+    "command": "git clone https://github.com/kuanntw/human-tone-skills"
+  }
+}

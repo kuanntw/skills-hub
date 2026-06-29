@@ -1,0 +1,25 @@
+{
+  "id": "karpathy-guidelines",
+  "name": "Karpathy Guidelines",
+  "type": "skill-package",
+  "description": "Coding discipline guidelines focused on simple, surgical, verifiable, and non-over-engineered changes.",
+  "category": ["coding", "engineering", "review", "discipline"],
+  "source": {
+    "type": "git",
+    "url": "https://github.com/kuanntw/andrej-karpathy-skills",
+    "entry": "skills/karpathy-guidelines/SKILL.md"
+  },
+  "triggers": ["code change", "refactor", "bug fix", "implementation", "keep it simple", "over-engineering", "surgical change", "程式碼", "重構", "修 bug"],
+  "use_when": [
+    "The task involves planning, implementing, or reviewing code changes.",
+    "The task benefits from avoiding unnecessary abstraction, hidden assumptions, or broad rewrites."
+  ],
+  "avoid_when": ["The task is purely visual design or prose editing with no engineering decision."],
+  "related_file_patterns": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.php", "**/*.py", "**/*.go", "**/*.rs", "**/*.java", "**/*.rb"],
+  "task_types": ["code_generation", "code_review", "refactoring", "bug_fix"],
+  "routing_hint": "Use as a supporting skill for engineering tasks, especially when scope control and verification matter.",
+  "installation": {
+    "method": "git",
+    "command": "git clone https://github.com/kuanntw/andrej-karpathy-skills"
+  }
+}
