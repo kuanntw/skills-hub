@@ -1,0 +1,26 @@
+{
+  "id": "playwright-readonly",
+  "name": "Playwright Read-Only Skills",
+  "type": "skill-kit",
+  "description": "A Playwright read-only regression testing template and skill set for safe browser checks without destructive actions.",
+  "category": ["testing", "playwright", "e2e", "browser", "qa"],
+  "source": {
+    "type": "git",
+    "url": "https://github.com/kuanntw/playwright-skills",
+    "entry": "skills/"
+  },
+  "triggers": ["Playwright", "E2E", "browser test", "read-only test", "regression", "screenshot", "visual check", "端對端測試", "瀏覽器測試"],
+  "use_when": [
+    "The task involves writing or running safe browser regression tests.",
+    "The task requires read-only Playwright checks, screenshots, UI verification, or non-destructive QA automation."
+  ],
+  "avoid_when": ["The requested test needs destructive writes unless explicitly approved and isolated."],
+  "related_file_patterns": ["playwright.config.*", "playwright.readonly.config.*", "tests/**/*.spec.ts", "e2e/**/*.spec.ts", "**/*.pw.ts"],
+  "task_types": ["testing", "e2e", "browser_automation", "qa", "visual_regression"],
+  "subskills": ["readonly-core", "readonly-adapters/template"],
+  "routing_hint": "Use this kit for browser-based verification, especially when tests must avoid mutations.",
+  "installation": {
+    "method": "git",
+    "command": "git clone https://github.com/kuanntw/playwright-skills"
+  }
+}

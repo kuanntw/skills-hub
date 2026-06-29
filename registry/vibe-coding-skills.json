@@ -1,0 +1,25 @@
+{
+  "id": "vibe-coding-skills",
+  "name": "Vibe Coding Skills",
+  "type": "framework",
+  "description": "A structured AI-assisted development framework covering context, atomic tasks, memory, patterns, and collaboration workflows.",
+  "category": ["ai-coding", "workflow", "framework", "collaboration"],
+  "source": {
+    "type": "git",
+    "url": "https://github.com/kuanntw/vibe-coding-skills",
+    "entry": "SKILLS.md"
+  },
+  "triggers": ["vibe coding", "AI coding workflow", "context engineering", "atomic task", "memory system", "AI 協作", "開發流程"],
+  "use_when": [
+    "The task involves structuring AI-assisted development work.",
+    "The task involves planning context, task decomposition, project memory, or repeatable coding workflows."
+  ],
+  "avoid_when": ["The task requires a narrower concrete skill such as Laravel, Playwright, or document generation."],
+  "related_file_patterns": ["AGENTS.md", "CLAUDE.md", "GEMINI.md", "*.md", ".github/**/*.md"],
+  "task_types": ["workflow_design", "ai_collaboration", "planning", "process_improvement"],
+  "routing_hint": "Use this as a supporting framework when shaping larger AI-assisted coding workflows or project conventions.",
+  "installation": {
+    "method": "git",
+    "command": "git clone https://github.com/kuanntw/vibe-coding-skills"
+  }
+}

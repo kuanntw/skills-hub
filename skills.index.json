@@ -1,0 +1,533 @@
+{
+  "schema_version": "0.1.0",
+  "name": "kuanntw-skills-hub",
+  "description": "A routing index for reusable AI skills maintained by kuanntw.",
+  "routing_policy": {
+    "load_strategy": "progressive_disclosure",
+    "first_read": [
+      "skills.index.json",
+      "skills.index.md"
+    ],
+    "then_read": "registry/<skill-id>.json",
+    "external_skill_loading": "only_when_relevant"
+  },
+  "skills": [
+    {
+      "id": "docx-template",
+      "name": "DOCX Template",
+      "type": "skill-package",
+      "description": "Company-style Word document generation from Markdown, plain text, or JSON inputs.",
+      "category": [
+        "documents",
+        "word",
+        "docx",
+        "reporting"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kuanntw/word-skills",
+        "entry": "skill/SKILL.md"
+      },
+      "triggers": [
+        "Word",
+        "DOCX",
+        "docx",
+        "document template",
+        "report",
+        "proposal",
+        "文件",
+        "報告",
+        "企劃書",
+        "Word 文件"
+      ],
+      "use_when": [
+        "The task involves generating a Word document.",
+        "The task involves converting Markdown, plain text, or JSON into a formatted company-style DOCX file."
+      ],
+      "avoid_when": [
+        "The task only needs a Markdown answer and no document artifact."
+      ],
+      "related_file_patterns": [
+        "**/*.docx",
+        "**/*.md",
+        "**/*.json",
+        "templates/**/*"
+      ],
+      "task_types": [
+        "document_generation",
+        "formatting",
+        "report_generation"
+      ],
+      "routing_hint": "Use this skill when the user asks for Word output, DOCX templates, or formal document generation.",
+      "installation": {
+        "method": "git",
+        "command": "git clone https://github.com/kuanntw/word-skills"
+      }
+    },
+    {
+      "id": "human-tone-zh",
+      "name": "Human Tone Chinese",
+      "type": "skill-package",
+      "description": "Traditional Chinese rewriting guidance for making text sound more natural, human, and less AI-like while preserving meaning.",
+      "category": [
+        "writing",
+        "editing",
+        "zh-tw",
+        "copywriting",
+        "tone"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kuanntw/human-tone-skills",
+        "entry": "skills/human-tone-zh/SKILL.md"
+      },
+      "triggers": [
+        "去 AI 味",
+        "改自然",
+        "人味",
+        "潤稿",
+        "中文文案",
+        "語氣",
+        "rewrite Chinese",
+        "make it human",
+        "less AI-like"
+      ],
+      "use_when": [
+        "The user asks to rewrite Chinese text in a more natural or human tone.",
+        "The task involves zh-TW copywriting, editing, tone refinement, or reducing AI-like phrasing."
+      ],
+      "avoid_when": [
+        "The task requires strict legal, medical, or financial wording where style changes could alter meaning."
+      ],
+      "related_file_patterns": [
+        "**/*.md",
+        "**/*.txt",
+        "content/**/*",
+        "copy/**/*"
+      ],
+      "task_types": [
+        "writing",
+        "editing",
+        "copywriting",
+        "tone_rewrite"
+      ],
+      "routing_hint": "Use this skill before rewriting Traditional Chinese prose, marketing copy, social posts, or user-facing messages.",
+      "installation": {
+        "method": "git",
+        "command": "git clone https://github.com/kuanntw/human-tone-skills"
+      }
+    },
+    {
+      "id": "karpathy-guidelines",
+      "name": "Karpathy Guidelines",
+      "type": "skill-package",
+      "description": "Coding discipline guidelines focused on simple, surgical, verifiable, and non-over-engineered changes.",
+      "category": [
+        "coding",
+        "engineering",
+        "review",
+        "discipline"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kuanntw/andrej-karpathy-skills",
+        "entry": "skills/karpathy-guidelines/SKILL.md"
+      },
+      "triggers": [
+        "code change",
+        "refactor",
+        "bug fix",
+        "implementation",
+        "keep it simple",
+        "over-engineering",
+        "surgical change",
+        "程式碼",
+        "重構",
+        "修 bug"
+      ],
+      "use_when": [
+        "The task involves planning, implementing, or reviewing code changes.",
+        "The task benefits from avoiding unnecessary abstraction, hidden assumptions, or broad rewrites."
+      ],
+      "avoid_when": [
+        "The task is purely visual design or prose editing with no engineering decision."
+      ],
+      "related_file_patterns": [
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.php",
+        "**/*.py",
+        "**/*.go",
+        "**/*.rs",
+        "**/*.java",
+        "**/*.rb"
+      ],
+      "task_types": [
+        "code_generation",
+        "code_review",
+        "refactoring",
+        "bug_fix"
+      ],
+      "routing_hint": "Use as a supporting skill for engineering tasks, especially when scope control and verification matter.",
+      "installation": {
+        "method": "git",
+        "command": "git clone https://github.com/kuanntw/andrej-karpathy-skills"
+      }
+    },
+    {
+      "id": "laravel-vibe",
+      "name": "Laravel Vibe Skills Kit",
+      "type": "skill-kit",
+      "description": "A Laravel development skills kit covering project framing, architecture, APIs, Livewire, multilingual strategy, testing, release, and AI collaboration.",
+      "category": [
+        "laravel",
+        "php",
+        "backend",
+        "livewire",
+        "testing",
+        "i18n"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kuanntw/laravel-skills",
+        "entry": "skills/laravel-vibe/SKILLS_INDEX.md"
+      },
+      "triggers": [
+        "Laravel",
+        "PHP",
+        "Eloquent",
+        "Livewire",
+        "Blade",
+        "migration",
+        "artisan",
+        "API Resource",
+        "Form Request",
+        "多語系",
+        "租戶翻譯"
+      ],
+      "use_when": [
+        "The task involves implementing, reviewing, or planning a Laravel application feature.",
+        "The task involves Laravel APIs, Livewire components, forms, tables, multilingual strategy, tests, releases, or observability."
+      ],
+      "avoid_when": [
+        "The task is unrelated to Laravel or PHP application development."
+      ],
+      "related_file_patterns": [
+        "composer.json",
+        "artisan",
+        "app/**/*.php",
+        "routes/*.php",
+        "database/migrations/*.php",
+        "resources/views/**/*.blade.php",
+        "tests/**/*.php",
+        "lang/**/*.php"
+      ],
+      "task_types": [
+        "code_generation",
+        "architecture",
+        "api_design",
+        "livewire",
+        "testing",
+        "release",
+        "i18n"
+      ],
+      "routing_hint": "Use this kit for Laravel work, then choose the most specific subskill from SKILLS_INDEX.md.",
+      "installation": {
+        "method": "git",
+        "command": "git clone https://github.com/kuanntw/laravel-skills"
+      },
+      "subskills": [
+        "project-framing",
+        "static-assets-and-external-resources",
+        "feature-architecture",
+        "api-design",
+        "livewire-component-architecture",
+        "livewire-forms-and-tables",
+        "livewire-testing",
+        "livewire-performance-and-pitfalls",
+        "multilingual-strategy",
+        "tenant-translation-override",
+        "data-and-eloquent",
+        "testing-and-quality",
+        "spec-consistency-and-coverage",
+        "release-and-observability",
+        "operation-manual",
+        "ai-collaboration-playbook"
+      ]
+    },
+    {
+      "id": "logo-skills",
+      "name": "Logo Skills",
+      "type": "skill-package",
+      "description": "Logo design and brand identity delivery workflow for creating, reviewing, and packaging logo work.",
+      "category": [
+        "design",
+        "branding",
+        "logo",
+        "identity"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kuanntw/logo-skills",
+        "entry": "SKILL.md"
+      },
+      "triggers": [
+        "logo",
+        "brand identity",
+        "visual identity",
+        "branding",
+        "商標",
+        "品牌識別",
+        "logo 設計",
+        "品牌設計"
+      ],
+      "use_when": [
+        "The task involves creating, reviewing, refining, or packaging logo designs.",
+        "The task involves brand identity deliverables, visual identity systems, or logo handoff standards."
+      ],
+      "avoid_when": [
+        "The task only needs general copy editing or unrelated code changes."
+      ],
+      "related_file_patterns": [
+        "**/*logo*",
+        "**/*brand*",
+        "**/*.svg",
+        "**/*.ai",
+        "**/*.png",
+        "**/*.pdf"
+      ],
+      "task_types": [
+        "design",
+        "brand_review",
+        "visual_identity",
+        "asset_delivery"
+      ],
+      "routing_hint": "Use this skill for logo or brand identity work before producing design directions, review checklists, or delivery packages.",
+      "installation": {
+        "method": "git",
+        "command": "git clone https://github.com/kuanntw/logo-skills"
+      }
+    },
+    {
+      "id": "playwright-readonly",
+      "name": "Playwright Read-Only Skills",
+      "type": "skill-kit",
+      "description": "A Playwright read-only regression testing template and skill set for safe browser checks without destructive actions.",
+      "category": [
+        "testing",
+        "playwright",
+        "e2e",
+        "browser",
+        "qa"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kuanntw/playwright-skills",
+        "entry": "skills/"
+      },
+      "triggers": [
+        "Playwright",
+        "E2E",
+        "browser test",
+        "read-only test",
+        "regression",
+        "screenshot",
+        "visual check",
+        "端對端測試",
+        "瀏覽器測試"
+      ],
+      "use_when": [
+        "The task involves writing or running safe browser regression tests.",
+        "The task requires read-only Playwright checks, screenshots, UI verification, or non-destructive QA automation."
+      ],
+      "avoid_when": [
+        "The requested test needs destructive writes unless explicitly approved and isolated."
+      ],
+      "related_file_patterns": [
+        "playwright.config.*",
+        "playwright.readonly.config.*",
+        "tests/**/*.spec.ts",
+        "e2e/**/*.spec.ts",
+        "**/*.pw.ts"
+      ],
+      "task_types": [
+        "testing",
+        "e2e",
+        "browser_automation",
+        "qa",
+        "visual_regression"
+      ],
+      "routing_hint": "Use this kit for browser-based verification, especially when tests must avoid mutations.",
+      "installation": {
+        "method": "git",
+        "command": "git clone https://github.com/kuanntw/playwright-skills"
+      },
+      "subskills": [
+        "readonly-core",
+        "readonly-adapters/template"
+      ]
+    },
+    {
+      "id": "skills-spec",
+      "name": "Skills Package Specification",
+      "type": "reference",
+      "description": "Reference specification for portable AI skill packages, metadata, layout, registry behavior, and progressive disclosure.",
+      "category": [
+        "specification",
+        "skills",
+        "metadata",
+        "registry"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kuanntw/skills-spec",
+        "entry": "README.md"
+      },
+      "triggers": [
+        "skill spec",
+        "skill.json",
+        "SKILL.md",
+        "registry schema",
+        "skills package",
+        "技能規格",
+        "技能索引"
+      ],
+      "use_when": [
+        "The task involves designing, validating, or discussing the structure of AI skills.",
+        "The task involves skill metadata, package layout, registry behavior, or compatibility with skill-reading agents."
+      ],
+      "avoid_when": [
+        "The task requires using a concrete skill rather than discussing skill package design."
+      ],
+      "related_file_patterns": [
+        "**/SKILL.md",
+        "**/skill.json",
+        "skills.index.json",
+        "registry/*.json"
+      ],
+      "task_types": [
+        "reference",
+        "schema_design",
+        "skill_authoring",
+        "registry_design"
+      ],
+      "routing_hint": "Use this as a reference when changing hub structure, skill metadata, or package conventions.",
+      "installation": {
+        "method": "git",
+        "command": "git clone https://github.com/kuanntw/skills-spec"
+      }
+    },
+    {
+      "id": "ui-ux-web-guidelines",
+      "name": "UI/UX Web Guidelines",
+      "type": "skill-package",
+      "description": "Web UI/UX guidance for layout, responsive design, accessibility, forms, helper text, and visual hierarchy.",
+      "category": [
+        "ui",
+        "ux",
+        "web",
+        "accessibility",
+        "frontend"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kuanntw/ui-ux-skills",
+        "entry": "SKILL.md"
+      },
+      "triggers": [
+        "UI",
+        "UX",
+        "web design",
+        "RWD",
+        "accessibility",
+        "form design",
+        "helper text",
+        "layout",
+        "介面",
+        "使用者體驗",
+        "響應式",
+        "無障礙"
+      ],
+      "use_when": [
+        "The task involves designing or reviewing web interfaces.",
+        "The task involves responsive layouts, forms, information hierarchy, accessibility, or user-facing microcopy."
+      ],
+      "avoid_when": [
+        "The task is purely backend logic with no user-facing interface impact."
+      ],
+      "related_file_patterns": [
+        "**/*.html",
+        "**/*.css",
+        "**/*.scss",
+        "**/*.tsx",
+        "**/*.jsx",
+        "resources/views/**/*.blade.php",
+        "src/components/**/*"
+      ],
+      "task_types": [
+        "ui_design",
+        "ux_review",
+        "frontend_review",
+        "accessibility_review"
+      ],
+      "routing_hint": "Use this skill before making or reviewing user-facing web UI changes.",
+      "installation": {
+        "method": "git",
+        "command": "git clone https://github.com/kuanntw/ui-ux-skills"
+      }
+    },
+    {
+      "id": "vibe-coding-skills",
+      "name": "Vibe Coding Skills",
+      "type": "framework",
+      "description": "A structured AI-assisted development framework covering context, atomic tasks, memory, patterns, and collaboration workflows.",
+      "category": [
+        "ai-coding",
+        "workflow",
+        "framework",
+        "collaboration"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kuanntw/vibe-coding-skills",
+        "entry": "SKILLS.md"
+      },
+      "triggers": [
+        "vibe coding",
+        "AI coding workflow",
+        "context engineering",
+        "atomic task",
+        "memory system",
+        "AI 協作",
+        "開發流程"
+      ],
+      "use_when": [
+        "The task involves structuring AI-assisted development work.",
+        "The task involves planning context, task decomposition, project memory, or repeatable coding workflows."
+      ],
+      "avoid_when": [
+        "The task requires a narrower concrete skill such as Laravel, Playwright, or document generation."
+      ],
+      "related_file_patterns": [
+        "AGENTS.md",
+        "CLAUDE.md",
+        "GEMINI.md",
+        "*.md",
+        ".github/**/*.md"
+      ],
+      "task_types": [
+        "workflow_design",
+        "ai_collaboration",
+        "planning",
+        "process_improvement"
+      ],
+      "routing_hint": "Use this as a supporting framework when shaping larger AI-assisted coding workflows or project conventions.",
+      "installation": {
+        "method": "git",
+        "command": "git clone https://github.com/kuanntw/vibe-coding-skills"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ui-ux-web-guidelines",
+  "name": "UI/UX Web Guidelines",
+  "type": "skill-package",
+  "description": "Web UI/UX guidance for layout, responsive design, accessibility, forms, helper text, and visual hierarchy.",
+  "category": ["ui", "ux", "web", "accessibility", "frontend"],
+  "source": {
+    "type": "git",
+    "url": "https://github.com/kuanntw/ui-ux-skills",
+    "entry": "SKILL.md"
+  },
+  "triggers": ["UI", "UX", "web design", "RWD", "accessibility", "form design", "helper text", "layout", "介面", "使用者體驗", "響應式", "無障礙"],
+  "use_when": [
+    "The task involves designing or reviewing web interfaces.",
+    "The task involves responsive layouts, forms, information hierarchy, accessibility, or user-facing microcopy."
+  ],
+  "avoid_when": ["The task is purely backend logic with no user-facing interface impact."],
+  "related_file_patterns": ["**/*.html", "**/*.css", "**/*.scss", "**/*.tsx", "**/*.jsx", "resources/views/**/*.blade.php", "src/components/**/*"],
+  "task_types": ["ui_design", "ux_review", "frontend_review", "accessibility_review"],
+  "routing_hint": "Use this skill before making or reviewing user-facing web UI changes.",
+  "installation": {
+    "method": "git",
+    "command": "git clone https://github.com/kuanntw/ui-ux-skills"
+  }
+}
