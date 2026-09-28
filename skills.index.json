@@ -528,6 +528,80 @@
         "method": "git",
         "command": "git clone https://github.com/kuanntw/vibe-coding-skills"
       }
+    },
+    {
+      "id": "taiwan-ndf-investment-review",
+      "name": "Taiwan NDF Investment Review",
+      "type": "skill-package",
+      "description": "Taiwan National Development Fund and VC/PE investment review for valuation, EPS, dilution, use of funds, milestones, due diligence, investment-committee questions, and IPO/OTC listing readiness.",
+      "category": [
+        "investment",
+        "venture-capital",
+        "private-equity",
+        "taiwan",
+        "ndf",
+        "valuation",
+        "due-diligence"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kuanntw/skills-hub",
+        "entry": "skills/taiwan-ndf-investment-review/SKILL.md"
+      },
+      "triggers": [
+        "National Development Fund",
+        "NDF",
+        "VC",
+        "venture capital",
+        "private equity",
+        "investment memo",
+        "investment committee",
+        "valuation",
+        "pre-money",
+        "post-money",
+        "EPS",
+        "dilution",
+        "cap table",
+        "due diligence",
+        "IPO readiness",
+        "OTC listing",
+        "國發基金",
+        "估值",
+        "投資審查",
+        "投委會",
+        "上市櫃"
+      ],
+      "use_when": [
+        "The user asks to review an investment proposal from a Taiwan NDF, VC, or PE perspective.",
+        "The task involves valuation, EPS, ownership, dilution, use-of-funds, forecast credibility, investment committee questions, or listing readiness.",
+        "The user needs to determine which National Development Fund investment route may fit a company or financing plan."
+      ],
+      "avoid_when": [
+        "The task only asks for general personal investing or public-stock portfolio advice.",
+        "The task is only accounting bookkeeping and does not involve an investment transaction or financing review."
+      ],
+      "related_file_patterns": [
+        "**/*investment*.docx",
+        "**/*investment*.pdf",
+        "**/*funding*.xlsx",
+        "**/*cap*table*.xlsx",
+        "**/*financial*.xlsx",
+        "**/*business*plan*.*"
+      ],
+      "task_types": [
+        "investment_review",
+        "valuation",
+        "due_diligence",
+        "financial_analysis",
+        "cap_table_analysis",
+        "investment_committee_memo",
+        "listing_readiness"
+      ],
+      "routing_hint": "Use this skill for Taiwan NDF applications and institutional startup/growth-company investment reviews. Verify current NDF, TWSE, and TPEx rules from official sources when eligibility or listing requirements materially affect the answer.",
+      "installation": {
+        "method": "git",
+        "command": "git clone https://github.com/kuanntw/skills-hub"
+      }
     }
   ]
 }
