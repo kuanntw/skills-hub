@@ -21,6 +21,7 @@ This repository is a routing index for reusable AI skills. It helps agents decid
 | `logo-skills` | `skill-package` | Creating, reviewing, refining, or packaging logos and brand identity deliverables. | <https://github.com/kuanntw/logo-skills> |
 | `playwright-readonly` | `skill-kit` | Writing or running safe read-only Playwright browser regression tests and UI checks. | <https://github.com/kuanntw/playwright-skills> |
 | `skills-spec` | `reference` | Designing or validating skill package structure, metadata, schema, or registry behavior. | <https://github.com/kuanntw/skills-spec> |
+| `taiwan-ndf-investment-review` | `skill-package` | Reviewing Taiwan NDF / VC / PE investment proposals, valuation, EPS, dilution, due diligence, use of funds, and listing readiness. | <https://github.com/kuanntw/skills-hub/tree/main/skills/taiwan-ndf-investment-review> |
 | `ui-ux-web-guidelines` | `skill-package` | Designing or reviewing web UI, UX, responsive layout, forms, helper text, and accessibility. | <https://github.com/kuanntw/ui-ux-skills> |
 | `vibe-coding-skills` | `framework` | Structuring AI-assisted coding workflows, context, atomic tasks, memory, and collaboration patterns. | <https://github.com/kuanntw/vibe-coding-skills> |
 
