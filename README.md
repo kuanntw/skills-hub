@@ -61,3 +61,13 @@ This offline helper reports matched triggers, paths, and task types together wit
 On 2026-10-25, all 10 source entries (including the Playwright `skills/` directory) were checked at the exact commit recorded as `source.observed_revision`. `source.observed_at` is the observation date. Open a snapshot as `SOURCE_URL/blob/OBSERVED_REVISION/ENTRY` (use `tree` for directories).
 
 These observations are not a package lockfile, a security audit, a statement of standard compliance, or permission to install/update/run. They do not assert the source is still current. License and package hashes are intentionally absent when not established. Before importing source material, verify its applicable license and notices; before execution, inspect the relevant files and honor the user's/environment's permissions. No third-party skill code is copied or executed by the catalog maintenance checks.
+
+## Revision History
+
+### 2026-10-25
+
+- Made `registry/*.json` the single editable source and added schema validation, deterministic index generation, read-only drift checks, and CI.
+- Preserved the 10 existing entries and legacy full JSON interface; added a compact discovery catalog and restored the five missing NDF Chinese triggers.
+- Recorded verified source commit/entry observations without inventing licenses, hashes, security-review claims, or installation approval.
+- Added an offline lexical candidate helper and positive/negative routing fixtures, with explicit read/install/run boundaries.
+- Validation: 14 Python unit tests (including schema rejection and routing subcases), index `--check`, Python compilation, and `git diff --check` passed locally. All 10 remote source entry paths were checked at the recorded commits. External skill execution, semantic agent evaluation, and application/runtime testing were not performed; CI status is reported separately on the PR.
