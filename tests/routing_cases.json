@@ -1,0 +1,15 @@
+[
+  {"query": "製作 Word 文件報告", "include": ["docx-template"], "exclude": ["laravel-vibe", "logo-skills"]},
+  {"query": "請幫這段中文文案去 AI 味", "include": ["human-tone-zh"], "exclude": ["docx-template"]},
+  {"query": "Keep this bug fix a surgical change", "include": ["karpathy-guidelines"], "exclude": ["logo-skills"]},
+  {"query": "Laravel Form Request 與租戶翻譯", "include": ["laravel-vibe"], "exclude": ["taiwan-ndf-investment-review"]},
+  {"query": "品牌識別 logo 設計", "include": ["logo-skills"], "exclude": ["playwright-readonly"]},
+  {"query": "Playwright 端對端測試", "include": ["playwright-readonly"], "exclude": ["docx-template"]},
+  {"query": "請檢查 registry schema 與技能索引", "include": ["skills-spec"], "exclude": ["logo-skills"]},
+  {"query": "國發基金的估值、投資審查、投委會與上市櫃準備", "include": ["taiwan-ndf-investment-review"], "exclude": ["laravel-vibe"]},
+  {"query": "檢查介面無障礙與 RWD", "include": ["ui-ux-web-guidelines"], "exclude": ["taiwan-ndf-investment-review"]},
+  {"query": "規劃 AI 協作與 context engineering 開發流程", "include": ["vibe-coding-skills"], "exclude": ["laravel-vibe"]},
+  {"query": "Build a service for a newsletter", "include": [], "exclude": ["ui-ux-web-guidelines", "taiwan-ndf-investment-review"]},
+  {"query": "The wordsmith studies typography", "include": [], "exclude": ["docx-template"]},
+  {"query": "What time is sunset?", "include": [], "exclude": ["docx-template", "human-tone-zh", "karpathy-guidelines", "laravel-vibe", "logo-skills", "playwright-readonly", "skills-spec", "taiwan-ndf-investment-review", "ui-ux-web-guidelines", "vibe-coding-skills"]}
+]

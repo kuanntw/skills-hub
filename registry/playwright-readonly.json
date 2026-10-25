@@ -7,7 +7,9 @@
   "source": {
     "type": "git",
     "url": "https://github.com/kuanntw/playwright-skills",
-    "entry": "skills/"
+    "entry": "skills/",
+    "observed_revision": "3693512059643000b6f60c9f07173e03bee48763",
+    "observed_at": "2026-10-25"
   },
   "triggers": ["Playwright", "E2E", "browser test", "read-only test", "regression", "screenshot", "visual check", "端對端測試", "瀏覽器測試"],
   "use_when": [

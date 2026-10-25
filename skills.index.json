@@ -5,11 +5,12 @@
   "routing_policy": {
     "load_strategy": "progressive_disclosure",
     "first_read": [
-      "skills.index.json",
+      "skills.catalog.json",
       "skills.index.md"
     ],
     "then_read": "registry/<skill-id>.json",
-    "external_skill_loading": "only_when_relevant"
+    "external_skill_loading": "only_when_relevant",
+    "installation_and_execution": "require_separate_authorization_and_environment_policy"
   },
   "skills": [
     {
@@ -26,7 +27,9 @@
       "source": {
         "type": "git",
         "url": "https://github.com/kuanntw/word-skills",
-        "entry": "skill/SKILL.md"
+        "entry": "skill/SKILL.md",
+        "observed_revision": "0f0304edcb376a89e5e386c29e4e4c739af2dae4",
+        "observed_at": "2026-10-25"
       },
       "triggers": [
         "Word",
@@ -79,7 +82,9 @@
       "source": {
         "type": "git",
         "url": "https://github.com/kuanntw/human-tone-skills",
-        "entry": "skills/human-tone-zh/SKILL.md"
+        "entry": "skills/human-tone-zh/SKILL.md",
+        "observed_revision": "5a94c7ebd29725a30928639cb9397a6fb2d67d29",
+        "observed_at": "2026-10-25"
       },
       "triggers": [
         "去 AI 味",
@@ -131,7 +136,9 @@
       "source": {
         "type": "git",
         "url": "https://github.com/kuanntw/andrej-karpathy-skills",
-        "entry": "skills/karpathy-guidelines/SKILL.md"
+        "entry": "skills/karpathy-guidelines/SKILL.md",
+        "observed_revision": "2c606141936f1eeef17fa3043a72095b4765b9c2",
+        "observed_at": "2026-10-25"
       },
       "triggers": [
         "code change",
@@ -192,7 +199,9 @@
       "source": {
         "type": "git",
         "url": "https://github.com/kuanntw/laravel-skills",
-        "entry": "skills/laravel-vibe/SKILLS_INDEX.md"
+        "entry": "skills/laravel-vibe/SKILLS_INDEX.md",
+        "observed_revision": "e9f033ce1a94e704c50b343bb03923588f6d8651",
+        "observed_at": "2026-10-25"
       },
       "triggers": [
         "Laravel",
@@ -233,11 +242,6 @@
         "release",
         "i18n"
       ],
-      "routing_hint": "Use this kit for Laravel work, then choose the most specific subskill from SKILLS_INDEX.md.",
-      "installation": {
-        "method": "git",
-        "command": "git clone https://github.com/kuanntw/laravel-skills"
-      },
       "subskills": [
         "project-framing",
         "static-assets-and-external-resources",
@@ -255,7 +259,12 @@
         "release-and-observability",
         "operation-manual",
         "ai-collaboration-playbook"
-      ]
+      ],
+      "routing_hint": "Use this kit for Laravel work, then choose the most specific subskill from SKILLS_INDEX.md.",
+      "installation": {
+        "method": "git",
+        "command": "git clone https://github.com/kuanntw/laravel-skills"
+      }
     },
     {
       "id": "logo-skills",
@@ -271,7 +280,9 @@
       "source": {
         "type": "git",
         "url": "https://github.com/kuanntw/logo-skills",
-        "entry": "SKILL.md"
+        "entry": "SKILL.md",
+        "observed_revision": "d44cf07137ffb8a56cfaf2bcf5f46e742c254b9a",
+        "observed_at": "2026-10-25"
       },
       "triggers": [
         "logo",
@@ -325,7 +336,9 @@
       "source": {
         "type": "git",
         "url": "https://github.com/kuanntw/playwright-skills",
-        "entry": "skills/"
+        "entry": "skills/",
+        "observed_revision": "3693512059643000b6f60c9f07173e03bee48763",
+        "observed_at": "2026-10-25"
       },
       "triggers": [
         "Playwright",
@@ -359,15 +372,15 @@
         "qa",
         "visual_regression"
       ],
+      "subskills": [
+        "readonly-core",
+        "readonly-adapters/template"
+      ],
       "routing_hint": "Use this kit for browser-based verification, especially when tests must avoid mutations.",
       "installation": {
         "method": "git",
         "command": "git clone https://github.com/kuanntw/playwright-skills"
-      },
-      "subskills": [
-        "readonly-core",
-        "readonly-adapters/template"
-      ]
+      }
     },
     {
       "id": "skills-spec",
@@ -383,7 +396,9 @@
       "source": {
         "type": "git",
         "url": "https://github.com/kuanntw/skills-spec",
-        "entry": "README.md"
+        "entry": "README.md",
+        "observed_revision": "16c21c7d674b4b82033baafde0aa556e6467f161",
+        "observed_at": "2026-10-25"
       },
       "triggers": [
         "skill spec",
@@ -420,6 +435,82 @@
       }
     },
     {
+      "id": "taiwan-ndf-investment-review",
+      "name": "Taiwan NDF Investment Review",
+      "type": "skill-package",
+      "description": "Taiwan National Development Fund and VC/PE investment review for valuation, EPS, dilution, use of funds, milestones, due diligence, investment-committee questions, and IPO/OTC listing readiness.",
+      "category": [
+        "investment",
+        "venture-capital",
+        "private-equity",
+        "taiwan",
+        "ndf",
+        "valuation",
+        "due-diligence"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kuanntw/skills-hub",
+        "entry": "skills/taiwan-ndf-investment-review/SKILL.md",
+        "observed_revision": "e711392cb19fe391c50ab8cbb778dc59f43ab26c",
+        "observed_at": "2026-10-25"
+      },
+      "triggers": [
+        "National Development Fund",
+        "NDF",
+        "VC",
+        "venture capital",
+        "private equity",
+        "investment memo",
+        "investment committee",
+        "valuation",
+        "pre-money",
+        "post-money",
+        "EPS",
+        "dilution",
+        "cap table",
+        "due diligence",
+        "IPO readiness",
+        "OTC listing",
+        "國發基金",
+        "估值",
+        "投資審查",
+        "投委會",
+        "上市櫃"
+      ],
+      "use_when": [
+        "The user asks to review an investment proposal from a Taiwan NDF, VC, or PE perspective.",
+        "The task involves valuation, EPS, ownership, dilution, use-of-funds, forecast credibility, investment committee questions, or listing readiness.",
+        "The user needs to determine which National Development Fund investment route may fit a company or financing plan."
+      ],
+      "avoid_when": [
+        "The task only asks for general personal investing or public-stock portfolio advice.",
+        "The task is only accounting bookkeeping and does not involve an investment transaction or financing review."
+      ],
+      "related_file_patterns": [
+        "**/*investment*.docx",
+        "**/*investment*.pdf",
+        "**/*funding*.xlsx",
+        "**/*cap*table*.xlsx",
+        "**/*financial*.xlsx",
+        "**/*business*plan*.*"
+      ],
+      "task_types": [
+        "investment_review",
+        "valuation",
+        "due_diligence",
+        "financial_analysis",
+        "cap_table_analysis",
+        "investment_committee_memo",
+        "listing_readiness"
+      ],
+      "routing_hint": "Use this skill for Taiwan NDF applications and institutional startup/growth-company investment reviews. Verify current NDF, TWSE, and TPEx rules from official sources when eligibility or listing requirements materially affect the answer.",
+      "installation": {
+        "method": "git",
+        "command": "git clone https://github.com/kuanntw/skills-hub"
+      }
+    },
+    {
       "id": "ui-ux-web-guidelines",
       "name": "UI/UX Web Guidelines",
       "type": "skill-package",
@@ -434,7 +525,9 @@
       "source": {
         "type": "git",
         "url": "https://github.com/kuanntw/ui-ux-skills",
-        "entry": "SKILL.md"
+        "entry": "SKILL.md",
+        "observed_revision": "f820a124943eedfc6452dc879d5fb01c74bbdb3b",
+        "observed_at": "2026-10-25"
       },
       "triggers": [
         "UI",
@@ -492,7 +585,9 @@
       "source": {
         "type": "git",
         "url": "https://github.com/kuanntw/vibe-coding-skills",
-        "entry": "SKILLS.md"
+        "entry": "SKILLS.md",
+        "observed_revision": "07d61157b560972cfc792ca8724d8b78d8c8144b",
+        "observed_at": "2026-10-25"
       },
       "triggers": [
         "vibe coding",
@@ -527,80 +622,6 @@
       "installation": {
         "method": "git",
         "command": "git clone https://github.com/kuanntw/vibe-coding-skills"
-      }
-    },
-    {
-      "id": "taiwan-ndf-investment-review",
-      "name": "Taiwan NDF Investment Review",
-      "type": "skill-package",
-      "description": "Taiwan National Development Fund and VC/PE investment review for valuation, EPS, dilution, use of funds, milestones, due diligence, investment-committee questions, and IPO/OTC listing readiness.",
-      "category": [
-        "investment",
-        "venture-capital",
-        "private-equity",
-        "taiwan",
-        "ndf",
-        "valuation",
-        "due-diligence"
-      ],
-      "source": {
-        "type": "git",
-        "url": "https://github.com/kuanntw/skills-hub",
-        "entry": "skills/taiwan-ndf-investment-review/SKILL.md"
-      },
-      "triggers": [
-        "National Development Fund",
-        "NDF",
-        "VC",
-        "venture capital",
-        "private equity",
-        "investment memo",
-        "investment committee",
-        "valuation",
-        "pre-money",
-        "post-money",
-        "EPS",
-        "dilution",
-        "cap table",
-        "due diligence",
-        "IPO readiness",
-        "OTC listing",
-        "國發基金",
-        "估值",
-        "投資審查",
-        "投委會",
-        "上市櫃"
-      ],
-      "use_when": [
-        "The user asks to review an investment proposal from a Taiwan NDF, VC, or PE perspective.",
-        "The task involves valuation, EPS, ownership, dilution, use-of-funds, forecast credibility, investment committee questions, or listing readiness.",
-        "The user needs to determine which National Development Fund investment route may fit a company or financing plan."
-      ],
-      "avoid_when": [
-        "The task only asks for general personal investing or public-stock portfolio advice.",
-        "The task is only accounting bookkeeping and does not involve an investment transaction or financing review."
-      ],
-      "related_file_patterns": [
-        "**/*investment*.docx",
-        "**/*investment*.pdf",
-        "**/*funding*.xlsx",
-        "**/*cap*table*.xlsx",
-        "**/*financial*.xlsx",
-        "**/*business*plan*.*"
-      ],
-      "task_types": [
-        "investment_review",
-        "valuation",
-        "due_diligence",
-        "financial_analysis",
-        "cap_table_analysis",
-        "investment_committee_memo",
-        "listing_readiness"
-      ],
-      "routing_hint": "Use this skill for Taiwan NDF applications and institutional startup/growth-company investment reviews. Verify current NDF, TWSE, and TPEx rules from official sources when eligibility or listing requirements materially affect the answer.",
-      "installation": {
-        "method": "git",
-        "command": "git clone https://github.com/kuanntw/skills-hub"
       }
     }
   ]

@@ -7,7 +7,9 @@
   "source": {
     "type": "git",
     "url": "https://github.com/kuanntw/skills-hub",
-    "entry": "skills/taiwan-ndf-investment-review/SKILL.md"
+    "entry": "skills/taiwan-ndf-investment-review/SKILL.md",
+    "observed_revision": "e711392cb19fe391c50ab8cbb778dc59f43ab26c",
+    "observed_at": "2026-10-25"
   },
   "triggers": [
     "National Development Fund",
@@ -25,7 +27,12 @@
     "cap table",
     "due diligence",
     "IPO readiness",
-    "OTC listing"
+    "OTC listing",
+    "國發基金",
+    "估值",
+    "投資審查",
+    "投委會",
+    "上市櫃"
   ],
   "use_when": [
     "The user asks to review an investment proposal from a Taiwan NDF, VC, or PE perspective.",

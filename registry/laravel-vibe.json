@@ -7,7 +7,9 @@
   "source": {
     "type": "git",
     "url": "https://github.com/kuanntw/laravel-skills",
-    "entry": "skills/laravel-vibe/SKILLS_INDEX.md"
+    "entry": "skills/laravel-vibe/SKILLS_INDEX.md",
+    "observed_revision": "e9f033ce1a94e704c50b343bb03923588f6d8651",
+    "observed_at": "2026-10-25"
   },
   "triggers": ["Laravel", "PHP", "Eloquent", "Livewire", "Blade", "migration", "artisan", "API Resource", "Form Request", "多語系", "租戶翻譯"],
   "use_when": [

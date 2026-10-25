@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skills Hub registry entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "type",
+    "description",
+    "category",
+    "source",
+    "triggers",
+    "use_when",
+    "avoid_when",
+    "related_file_patterns",
+    "task_types",
+    "routing_hint",
+    "installation"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "maxLength": 64,
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "type": {
+      "enum": [
+        "skill-package",
+        "skill-kit",
+        "reference",
+        "framework"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "category": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "triggers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "use_when": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "avoid_when": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "related_file_patterns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "task_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "subskills": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "url",
+        "entry"
+      ],
+      "properties": {
+        "type": {
+          "const": "git"
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https://github\\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+        },
+        "entry": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\)(?!.*:)[^\\s]+$"
+        },
+        "observed_revision": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "dependentRequired": {
+        "observed_revision": [
+          "observed_at"
+        ],
+        "observed_at": [
+          "observed_revision"
+        ]
+      }
+    },
+    "routing_hint": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "installation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "command"
+      ],
+      "properties": {
+        "method": {
+          "const": "git"
+        },
+        "command": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      }
+    }
+  }
+}

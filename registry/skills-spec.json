@@ -7,7 +7,9 @@
   "source": {
     "type": "git",
     "url": "https://github.com/kuanntw/skills-spec",
-    "entry": "README.md"
+    "entry": "README.md",
+    "observed_revision": "16c21c7d674b4b82033baafde0aa556e6467f161",
+    "observed_at": "2026-10-25"
   },
   "triggers": ["skill spec", "skill.json", "SKILL.md", "registry schema", "skills package", "技能規格", "技能索引"],
   "use_when": [
