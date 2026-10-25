@@ -7,7 +7,9 @@
   "source": {
     "type": "git",
     "url": "https://github.com/kuanntw/word-skills",
-    "entry": "skill/SKILL.md"
+    "entry": "skill/SKILL.md",
+    "observed_revision": "0f0304edcb376a89e5e386c29e4e4c739af2dae4",
+    "observed_at": "2026-10-25"
   },
   "triggers": ["Word", "DOCX", "docx", "document template", "report", "proposal", "文件", "報告", "企劃書", "Word 文件"],
   "use_when": [

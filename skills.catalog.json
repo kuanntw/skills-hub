@@ -1,0 +1,86 @@
+{
+  "schema_version": "0.1.0",
+  "name": "kuanntw-skills-hub",
+  "routing_policy": {
+    "load_strategy": "progressive_disclosure",
+    "first_read": [
+      "skills.catalog.json",
+      "skills.index.md"
+    ],
+    "then_read": "registry/<skill-id>.json",
+    "external_skill_loading": "only_when_relevant",
+    "installation_and_execution": "require_separate_authorization_and_environment_policy"
+  },
+  "skills": [
+    {
+      "id": "docx-template",
+      "name": "DOCX Template",
+      "type": "skill-package",
+      "description": "Company-style Word document generation from Markdown, plain text, or JSON inputs.",
+      "registry": "registry/docx-template.json"
+    },
+    {
+      "id": "human-tone-zh",
+      "name": "Human Tone Chinese",
+      "type": "skill-package",
+      "description": "Traditional Chinese rewriting guidance for making text sound more natural, human, and less AI-like while preserving meaning.",
+      "registry": "registry/human-tone-zh.json"
+    },
+    {
+      "id": "karpathy-guidelines",
+      "name": "Karpathy Guidelines",
+      "type": "skill-package",
+      "description": "Coding discipline guidelines focused on simple, surgical, verifiable, and non-over-engineered changes.",
+      "registry": "registry/karpathy-guidelines.json"
+    },
+    {
+      "id": "laravel-vibe",
+      "name": "Laravel Vibe Skills Kit",
+      "type": "skill-kit",
+      "description": "A Laravel development skills kit covering project framing, architecture, APIs, Livewire, multilingual strategy, testing, release, and AI collaboration.",
+      "registry": "registry/laravel-vibe.json"
+    },
+    {
+      "id": "logo-skills",
+      "name": "Logo Skills",
+      "type": "skill-package",
+      "description": "Logo design and brand identity delivery workflow for creating, reviewing, and packaging logo work.",
+      "registry": "registry/logo-skills.json"
+    },
+    {
+      "id": "playwright-readonly",
+      "name": "Playwright Read-Only Skills",
+      "type": "skill-kit",
+      "description": "A Playwright read-only regression testing template and skill set for safe browser checks without destructive actions.",
+      "registry": "registry/playwright-readonly.json"
+    },
+    {
+      "id": "skills-spec",
+      "name": "Skills Package Specification",
+      "type": "reference",
+      "description": "Reference specification for portable AI skill packages, metadata, layout, registry behavior, and progressive disclosure.",
+      "registry": "registry/skills-spec.json"
+    },
+    {
+      "id": "taiwan-ndf-investment-review",
+      "name": "Taiwan NDF Investment Review",
+      "type": "skill-package",
+      "description": "Taiwan National Development Fund and VC/PE investment review for valuation, EPS, dilution, use of funds, milestones, due diligence, investment-committee questions, and IPO/OTC listing readiness.",
+      "registry": "registry/taiwan-ndf-investment-review.json"
+    },
+    {
+      "id": "ui-ux-web-guidelines",
+      "name": "UI/UX Web Guidelines",
+      "type": "skill-package",
+      "description": "Web UI/UX guidance for layout, responsive design, accessibility, forms, helper text, and visual hierarchy.",
+      "registry": "registry/ui-ux-web-guidelines.json"
+    },
+    {
+      "id": "vibe-coding-skills",
+      "name": "Vibe Coding Skills",
+      "type": "framework",
+      "description": "A structured AI-assisted development framework covering context, atomic tasks, memory, patterns, and collaboration workflows.",
+      "registry": "registry/vibe-coding-skills.json"
+    }
+  ]
+}

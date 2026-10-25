@@ -7,7 +7,9 @@
   "source": {
     "type": "git",
     "url": "https://github.com/kuanntw/vibe-coding-skills",
-    "entry": "SKILLS.md"
+    "entry": "SKILLS.md",
+    "observed_revision": "07d61157b560972cfc792ca8724d8b78d8c8144b",
+    "observed_at": "2026-10-25"
   },
   "triggers": ["vibe coding", "AI coding workflow", "context engineering", "atomic task", "memory system", "AI 協作", "開發流程"],
   "use_when": [

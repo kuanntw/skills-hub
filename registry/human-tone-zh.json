@@ -7,7 +7,9 @@
   "source": {
     "type": "git",
     "url": "https://github.com/kuanntw/human-tone-skills",
-    "entry": "skills/human-tone-zh/SKILL.md"
+    "entry": "skills/human-tone-zh/SKILL.md",
+    "observed_revision": "5a94c7ebd29725a30928639cb9397a6fb2d67d29",
+    "observed_at": "2026-10-25"
   },
   "triggers": ["去 AI 味", "改自然", "人味", "潤稿", "中文文案", "語氣", "rewrite Chinese", "make it human", "less AI-like"],
   "use_when": [

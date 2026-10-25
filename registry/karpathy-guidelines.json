@@ -7,7 +7,9 @@
   "source": {
     "type": "git",
     "url": "https://github.com/kuanntw/andrej-karpathy-skills",
-    "entry": "skills/karpathy-guidelines/SKILL.md"
+    "entry": "skills/karpathy-guidelines/SKILL.md",
+    "observed_revision": "2c606141936f1eeef17fa3043a72095b4765b9c2",
+    "observed_at": "2026-10-25"
   },
   "triggers": ["code change", "refactor", "bug fix", "implementation", "keep it simple", "over-engineering", "surgical change", "程式碼", "重構", "修 bug"],
   "use_when": [

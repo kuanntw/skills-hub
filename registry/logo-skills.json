@@ -7,7 +7,9 @@
   "source": {
     "type": "git",
     "url": "https://github.com/kuanntw/logo-skills",
-    "entry": "SKILL.md"
+    "entry": "SKILL.md",
+    "observed_revision": "d44cf07137ffb8a56cfaf2bcf5f46e742c254b9a",
+    "observed_at": "2026-10-25"
   },
   "triggers": ["logo", "brand identity", "visual identity", "branding", "商標", "品牌識別", "logo 設計", "品牌設計"],
   "use_when": [

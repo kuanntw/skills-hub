@@ -7,7 +7,9 @@
   "source": {
     "type": "git",
     "url": "https://github.com/kuanntw/ui-ux-skills",
-    "entry": "SKILL.md"
+    "entry": "SKILL.md",
+    "observed_revision": "f820a124943eedfc6452dc879d5fb01c74bbdb3b",
+    "observed_at": "2026-10-25"
   },
   "triggers": ["UI", "UX", "web design", "RWD", "accessibility", "form design", "helper text", "layout", "介面", "使用者體驗", "響應式", "無障礙"],
   "use_when": [
